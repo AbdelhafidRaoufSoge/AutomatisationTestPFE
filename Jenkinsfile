@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Étape pour récupérer le code source depuis Git
-                git 'https://github.com/votre-utilisateur/votre-projet.git'
+                git 'https://github.com/AbdelhafidRaoufSoge/AutomatisationTestPFE.git'
             }
         }
 
@@ -29,13 +29,13 @@ pipeline {
             // Si le pipeline réussit, envoyer un e-mail de notification
             emailext body: "Le build du projet Gradle Kotlin a réussi.",
                      subject: "Build du projet Kotlin réussi",
-                     to: "destinataire@example.com"
+                     to: "raouf.abdelhafid@outlook.fr"
         }
         failure {
             // Si le pipeline échoue, envoyer un e-mail de notification
             emailext body: "Le build du projet Gradle Kotlin a échoué.",
                      subject: "Échec du build du projet Kotlin",
-                     to: "destinataire@example.com"
+                     to: "raouf.abdelhafid@outlook.fr"
         }
     }
 }
